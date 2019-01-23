@@ -1,4 +1,4 @@
-' This is bad code, for a couple of reasons:
+' This is bad code, for at least a couple of reasons:
 ' 1. Types aren't very efficient - optimised for dev time
 ' 2. It won't work with the 2d arrays / scalars pulled from Excel cells. It only works with 1D VBA arrays.
 
