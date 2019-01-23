@@ -2,6 +2,9 @@
 ' 1. Types aren't very efficient - just getting something together quickly
 ' 2. It won't work with the 2d arrays / scalars pulled from Excel cells. It only works with 1D VBA arrays.
 
+' Would also be nice to get iota, match ('deep equality'), grade, count...
+' Could probably use count in impl of other functions, and match in testing.
+
 Function where(flags As Variant)
 ' TODO should take n of the element, not just 1
 ' (ie flags can be >1)
