@@ -164,6 +164,8 @@ End Function
 
 
 Function asc(arr As Variant)
+' TODO This sort has *awful* complexity
+' TODO what about elements that are equal?
 
     Dim output() As Variant
     ReDim output(LBound(arr) To UBound(arr))
