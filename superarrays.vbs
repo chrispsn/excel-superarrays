@@ -1,4 +1,20 @@
-Option Explicit
+' Copyright 2019 Chris Pearson
+' 
+' Licensed under the Apache License, Version 2.0 (the "License");
+' you may not use this file except in compliance with the License.
+' You may obtain a copy of the License at
+' 
+'    http://www.apache.org/licenses/LICENSE-2.0
+' 
+' Unless required by applicable law or agreed to in writing, software
+' distributed under the License is distributed on an "AS IS" BASIS,
+' WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+' See the License for the specific language governing permissions and
+' limitations under the License.
+
+' -------------------
+' --- SUPERARRAYS ---
+' -------------------
 
 ' This is a sketch of what it may look like for Excel/VBA to have supercharged array processing capabilities.
 ' 
@@ -6,12 +22,16 @@ Option Explicit
 ' 1. It won't work with the 2D arrays / scalars pulled from Excel cells.
 ' 2. It only works with 1D VBA arrays. So you probably can't use them as UDFs yet, and you'd probably get a lot more power when you can start controlling the rank of application.
 '
+' It is absolutely not production-ready.
+'
 ' Other caveats:
-' - no first-class functions in VBA - unsure how we'll do reductions like "+/"
+' - no first-class functions in VBA - unsure how we'll do reductions like "+/", if even necessary
 ' - VBA has no array penetration like the spreadsheet does (eg 1 + Array(1,2) <> Array(2,3)), so we may need to re-implement some primitives
 ' - many of these probably have perfectly fine analogues in the Excel world (eg count, sum, at; and range in the dynamic array future) - so query whether some of the fns below are necessary.
 '
 ' Any improvements are most welcome.
+
+Option Explicit
 
 Sub tests()
 
