@@ -13,6 +13,10 @@ console.log(WHERE([0,1,2]))
 console.log(Array.from(where([])))
 console.log(Array.from(where([0,1,2])))
 
+// Idea: split library into two files, one EAGER (uc) and one lazy (lc)? Then ES5 users can just use the former.
+// (But what if code was written with the lowercase fns in mind? Maybe after a failed feature detection for generators,
+// 'where' can be routed to point to 'WHERE's fn and the generators file can avoid being loaded. Object.defineProperties or something.) 
+
 // Would be interesting to see performance benchmarks vs standard Array.prototype.filter, etc.
 
 // Integrate with Mesh? Becomes mesh stdlib?
