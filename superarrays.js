@@ -17,6 +17,10 @@ console.log(Array.from(where([0,1,2])))
 // (But what if code was written with the lowercase fns in mind? Maybe after a failed feature detection for generators,
 // 'where' can be routed to point to 'WHERE's fn and the generators file can avoid being loaded. Object.defineProperties or something.) 
 
+// How much can we bootstrap?
+// apply/index as ur-function https://code.kx.com/v2/style/application/
+// fundamental operators in array langs: https://www.reddit.com/r/apljk/comments/b5j3xq/fundamental_operators_on_array_languages/
+
 // Would be interesting to see performance benchmarks vs standard Array.prototype.filter, etc.
 
 // Integrate with Mesh? Becomes mesh stdlib?
