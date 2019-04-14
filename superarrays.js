@@ -19,6 +19,7 @@ console.log(Array.from(where([0,1,2])))
 
 // How much can we bootstrap?
 // apply/index as ur-function https://code.kx.com/v2/style/application/
+// (eg express 'at' in terms of enlist and apply: https://code.kx.com/v2/style/application/#where-its)
 // fundamental operators in array langs: https://www.reddit.com/r/apljk/comments/b5j3xq/fundamental_operators_on_array_languages/
 
 // Would be interesting to see performance benchmarks vs standard Array.prototype.filter, etc.
