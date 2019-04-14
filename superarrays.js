@@ -5,7 +5,7 @@
 // Idea: uppercase is lazy, lowercase is eager.
 // So that fns don't have to care about whether their input is lazy or eager,
 // fns could consume inputs using iterator syntax, or else check and do different things depending on arg type.
-function WHERE(cs) {const o = []; for (let i in cs) for (let c=0,C=cs[i]; c<C; c++) o.push(i); return o}
+function  WHERE(cs) {const o = []; for (let i in cs) for (let c=0,C=cs[i]; c<C; c++) o.push(i); return o}
 function* where(cs) {for (let i in cs) for (let c=0,C=cs[i]; c<C; c++) yield i}
 
 console.log(WHERE([]))
