@@ -2,15 +2,17 @@
 // Aim is to encourage k-like programming patterns. Fast and 'generic/composable' (eg beauty of where).
 // https://v8.dev/blog/elements-kinds
 
-function where() {return 123}
-function WHERE() {return 321}
+// Idea: uppercase is lazy, lowercase is eager.
+// So that fns don't have to care about whether their input is lazy or eager,
+// fns could consume inputs using iterator syntax, or else check and do different things depending on arg type.
+function WHERE(cs) {const o = []; for (let i in cs) {for (let c=0,C=cs[i]; c<C; c++) o.push(i)}; return o}
+function* where(cs) {for (let i in cs) {for (let c=0,C=cs[i]; c<C; c++) yield i}}
 
-where()
-WHERE()
+console.log(WHERE([]))
+console.log(WHERE([0,1,2]))
+console.log(Array.from(where([])))
+console.log(Array.from(where([0,1,2])))
 
-// they are different. so uppercase fns could return an array, lowercase a generator.
-// functions could consume their inputs using iterator syntax, or else check and do different things depending on arg type.
+// Would be interesting to see performance benchmarks vs standard Array.prototype.filter, etc.
 
-// would be interesting to see performance benchmarks vs standard Array.prototype.filter, etc.
-
-// integrate with Mesh? Becomes mesh stdlib?
+// Integrate with Mesh? Becomes mesh stdlib?
